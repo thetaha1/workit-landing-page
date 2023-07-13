@@ -1,0 +1,49 @@
+:root {
+  --dark-purple: #24053e;
+  --davy-s-grey: #584d62;
+  --eucaplyptus: #44ffa1;
+  --ghost-white: #fcf8ff;
+  --white: #ffffff;
+
+  /* Fonts */
+
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Landing */
+
+/* End Landing */
