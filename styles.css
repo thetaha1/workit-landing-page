@@ -14,6 +14,8 @@
   --clr-neutral-100: #ffffff;
 
   --ff-default: "Fraunces", sans-serif;
+
+  --ff-bold: 700;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -71,3 +73,41 @@ body {
   }
 }
 /* End Global Rules */
+/* Start Heading */
+.header {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+}
+/* End Heading */
+/* Start Landing */
+.landing {
+  height: 730px;
+  background-image: url(/images/bg-landing.svg);
+  background-size: cover;
+  background-position: center center;
+  background-position: 100% 100%;
+}
+.landing .container .title {
+  width: 635px;
+
+  color: var(--clr-neutral-100, #fff);
+  font-size: 80px;
+  font-weight: var(--ff-bold);
+  text-align: center;
+  line-height: 80px;
+  margin: auto;
+}
+.landing .title span {
+  border-bottom: 2px solid var(--clr-primary-400);
+}
+/* End Landing */
