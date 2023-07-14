@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Fraunces";
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("starter-code/assets/fonts/fraunces/Fraunces-VariableFont_SOFT/,WONK/,opsz/,wght.ttf")
+    format("truetype");
+}
+:root {
+  --dark-purple: #24053e;
+  --davy-s-grey: #584d62;
+  --eucaplyptus: #44ffa1;
+  --ghost-white: #fcf8ff;
+  --white: #ffffff;
+
+  --ff-default: "Fraunces", sans-serif;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--ff-main);
+  background-color: var(--clr-neutral-100);
+}
+/* Set the scrollbar width and height */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* Track styles */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f520;
+  border-radius: 4px;
+}
+/* Handle styles */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+/* Handle hover styles */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
