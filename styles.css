@@ -1,9 +1,15 @@
 @font-face {
   font-family: "Fraunces";
   font-display: swap;
-  font-weight: 100 900;
-  src: url("starter-code/assets/fonts/fraunces/Fraunces-VariableFont_SOFT/,WONK/,opsz/,wght.ttf")
+  font-weight: 600 700;
+  src: url("fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf")
     format("truetype");
+}
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  font-weight: 700;
+  src: url("fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
 }
 :root {
   --clr-primary-400: hsl(150, 100%, 63%);
@@ -11,11 +17,15 @@
 
   --clr-neutral-600: hsl(271, 12%, 34%);
   --clr-neutral-200: hsl(274, 100%, 99%);
-  --clr-neutral-100: #ffffff;
+  --clr-neutral-100: hsl(0, 0%, 100%);
 
-  --ff-default: "Fraunces", sans-serif;
+  --ff-base: "Manrope", sans-serif;
+  --ff-accent: "Fraunces", sans-serif;
 
+  --ff-semi-bold: 600;
   --ff-bold: 700;
+
+  --dt-main: 0.3s; /* Duration Time */
 }
 /* End Variables */
 /* Start Global Rules */
@@ -31,28 +41,13 @@ body {
   font-family: var(--ff-main);
   background-color: var(--clr-neutral-100);
 }
-/* Set the scrollbar width and height */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-/* Track styles */
-::-webkit-scrollbar-track {
-  background-color: #f5f5f520;
-  border-radius: 4px;
-}
-/* Handle styles */
-::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-/* Handle hover styles */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  display: none;
 }
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  text-align: center;
 }
 /* Small */
 @media (min-width: 768px) {
@@ -88,14 +83,44 @@ body {
   align-items: center;
   margin-top: 56px;
 }
+.header .button {
+  border: 0;
+  background-color: transparent;
+  color: var(--clr-neutral-100, #fff);
+  font-size: 18px;
+  font-weight: var(--ff-bold);
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  border-bottom: 2px solid var(--clr-primary-400, #44ffa1);
+  transition: var(--dt-main);
+}
+.header .button:hover {
+  color: var(--clr-primary-400, #44ffa1);
+}
 /* End Heading */
 /* Start Landing */
 .landing {
+  background-color: #fcf8ff;
   height: 730px;
   background-image: url(/images/bg-landing.svg);
   background-size: cover;
-  background-position: center center;
   background-position: 100% 100%;
+}
+.landing::after {
+  content: url("images/image-hero.png");
+  width: 762px;
+  height: 424px;
+  position: absolute;
+  top: 471px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+hr {
+  height: 0px;
+  border: 0;
+}
+.landing .landing-content {
+  margin: 0;
 }
 .landing .container .title {
   width: 635px;
@@ -105,9 +130,73 @@ body {
   font-weight: var(--ff-bold);
   text-align: center;
   line-height: 80px;
-  margin: auto;
+  margin: 146px auto 37px;
 }
 .landing .title span {
   border-bottom: 2px solid var(--clr-primary-400);
 }
+.learn-more {
+  background: var(--clr-primary-400, #44ffa1);
+  color: var(--clr-primary-900, #24053e);
+  font-size: 18px;
+  font-weight: var(--ff-bold);
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  padding: 16px 32px;
+  border: 0;
+  transition: var(--dt-main);
+}
+.learn-more:hover {
+  background-color: transparent;
+  color: var(--clr-primary-400, #44ffa1);
+  box-shadow: inset 0 0 0 2px var(--clr-primary-400, #44ffa1);
+}
 /* End Landing */
+/* Start Features */
+.features {
+  height: 734px;
+  background-image: url("images/bg-features.svg");
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.features-content {
+  margin-top: 255px;
+  display: flex;
+  gap: 26px;
+}
+.features-content .func {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  justify-content: center;
+  align-items: center;
+}
+.num {
+  width: 56px;
+  height: 56px;
+  border-radius: 30.5px;
+  border: 1px solid var(--clr-primary-900, #584d62);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--clr-primary-900, #24053e);
+  font-family: var(--ff-accent);
+  font-size: 24px;
+  font-weight: var(--ff-semi-bold);
+  line-height: 40px;
+}
+.features-content .func .info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.info .title {
+  color: var(--clr-primary-900, #24053e);
+  font-family: var(--ff-accent);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+}
+/* End Features */
