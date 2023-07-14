@@ -156,9 +156,13 @@ hr {
 /* Start Features */
 .features {
   height: 734px;
+
   background-image: url("images/bg-features.svg");
   background-size: cover;
   background-position: 100% 100%;
+}
+.features .container {
+  width: 1114px;
 }
 .features-content {
   margin-top: 255px;
@@ -200,7 +204,7 @@ hr {
   font-weight: 600;
   line-height: 40px;
 }
-.info .title + p {
+.func .info .title + p {
   color: var(--clr-neutral-600, #584d62);
   font-size: 18px;
   font-family: var(--ff-base);
@@ -209,3 +213,63 @@ hr {
   padding: 0 15px;
 }
 /* End Features */
+/* Start Contact */
+.contact .container {
+  padding-top: 110px;
+  padding-bottom: 100px;
+}
+.contact-content {
+  width: 1120px;
+  height: 586px;
+  text-align: center;
+  position: relative;
+  padding: 0 40px;
+  margin: auto;
+}
+.contact-content .image {
+  width: 477px;
+  height: 477px;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contact-content .info {
+  width: 730px;
+  height: fit-content;
+  background-color: var(--clr-primary-900, #24053e);
+  padding: 64px;
+  text-align: left;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.contact-content .info .title {
+  color: var(--clr-neutral-100, #fff);
+  font-family: var(--ff-accent);
+  font-size: 56px;
+  font-weight: var(--fw-semi-bold);
+  line-height: 64px;
+}
+.contact-content .info .title + p {
+  color: var(--clr-neutral-100, #fff);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  padding: 32px 0px;
+}
+.contact-content .info .button-subscribe {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-primary-900, #24053e);
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  line-height: 32px;
+  letter-spacing: -0.18px;
+  padding: 13px 26px;
+}
+/* End Contact */
