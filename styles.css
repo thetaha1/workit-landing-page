@@ -6,16 +6,16 @@
     format("truetype");
 }
 :root {
-  --dark-purple: #24053e;
-  --davy-s-grey: #584d62;
-  --eucaplyptus: #44ffa1;
-  --ghost-white: #fcf8ff;
-  --white: #ffffff;
+  --clr-primary-400: hsl(150, 100%, 63%);
+  --clr-primary-900: hsl(273, 85%, 13%);
+
+  --clr-neutral-600: hsl(271, 12%, 34%);
+  --clr-neutral-200: hsl(274, 100%, 99%);
+  --clr-neutral-100: #ffffff;
 
   --ff-default: "Fraunces", sans-serif;
 }
 /* End Variables */
-
 /* Start Global Rules */
 * {
   box-sizing: border-box;
