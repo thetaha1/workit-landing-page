@@ -8,7 +8,7 @@
 @font-face {
   font-family: "Manrope";
   font-display: swap;
-  font-weight: 700;
+  font-weight: 400 700;
   src: url("fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
 }
 :root {
@@ -22,8 +22,9 @@
   --ff-base: "Manrope", sans-serif;
   --ff-accent: "Fraunces", sans-serif;
 
-  --ff-semi-bold: 600;
-  --ff-bold: 700;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
 
   --dt-main: 0.3s; /* Duration Time */
 }
@@ -88,7 +89,7 @@ body {
   background-color: transparent;
   color: var(--clr-neutral-100, #fff);
   font-size: 18px;
-  font-weight: var(--ff-bold);
+  font-weight: var(--fw-bold);
   line-height: 32px;
   letter-spacing: -0.18px;
   border-bottom: 2px solid var(--clr-primary-400, #44ffa1);
@@ -127,7 +128,7 @@ hr {
 
   color: var(--clr-neutral-100, #fff);
   font-size: 80px;
-  font-weight: var(--ff-bold);
+  font-weight: var(--fw-bold);
   text-align: center;
   line-height: 80px;
   margin: 146px auto 37px;
@@ -139,7 +140,7 @@ hr {
   background: var(--clr-primary-400, #44ffa1);
   color: var(--clr-primary-900, #24053e);
   font-size: 18px;
-  font-weight: var(--ff-bold);
+  font-weight: var(--fw-bold);
   line-height: 32px;
   letter-spacing: -0.18px;
   padding: 16px 32px;
@@ -183,7 +184,7 @@ hr {
   color: var(--clr-primary-900, #24053e);
   font-family: var(--ff-accent);
   font-size: 24px;
-  font-weight: var(--ff-semi-bold);
+  font-weight: var(--fw-semi-bold);
   line-height: 40px;
 }
 .features-content .func .info {
@@ -198,5 +199,13 @@ hr {
   font-style: normal;
   font-weight: 600;
   line-height: 40px;
+}
+.info .title + p {
+  color: var(--clr-neutral-600, #584d62);
+  font-size: 18px;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 32px;
+  padding: 0 15px;
 }
 /* End Features */
