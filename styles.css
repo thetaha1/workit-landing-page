@@ -140,18 +140,16 @@ hr::after {
   top: 314px;
   right: -48px;
 }
-.landing .landing-content {
-  /* margin: 0; */
-}
 .landing .container .title {
   width: 635px;
   color: var(--clr-neutral-100, #fff);
 
   font-family: var(--ff-accent);
   font-size: 80px;
-  font-weight: var(--fw-bold);
-  text-align: center;
+  font-weight: var(--fw-semi-bold);
   line-height: 80px;
+  text-align: center;
+
   margin: 146px auto 37px;
 }
 .landing .title span {
@@ -272,7 +270,7 @@ hr::after {
 
   width: 730px;
   height: fit-content;
-  
+
   text-align: left;
 
   padding: 64px;
@@ -310,7 +308,7 @@ hr::after {
   letter-spacing: -0.18px;
 
   padding: 13px 26px;
-  
+
   transition: var(--dt-main);
 }
 .contact-content .info .button-subscribe:hover {
