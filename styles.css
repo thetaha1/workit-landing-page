@@ -39,8 +39,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: var(--ff-main);
+  font-family: var(--ff-base);
   background-color: var(--clr-neutral-100);
+  font-size: 18px;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -70,44 +71,27 @@ body {
 }
 /* End Global Rules */
 /* Start Heading */
-.header {
-  margin-left: auto;
-  margin-right: auto;
-}
-hr::before {
-  content: url(images/bg-pattern-1.svg);
-  width: 341px;
-  height: 317px;
-  position: absolute;
-  top: 116px;
-  left: -138px;
-}
-hr::after {
-  content: url(images/bg-pattern-2.svg);
-  width: 174;
-  height: 181px;
-  position: absolute;
-  top: 314px;
-  right: -48px;
-}
 .header .container {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   margin-top: 56px;
 }
 .header .button {
   border: 0;
   background-color: transparent;
   color: var(--clr-neutral-100, #fff);
-  font-size: 18px;
+
   font-weight: var(--fw-bold);
   line-height: 32px;
   letter-spacing: -0.18px;
+
   border-bottom: 2px solid var(--clr-primary-400, #44ffa1);
   transition: var(--dt-main);
 }
@@ -117,8 +101,8 @@ hr::after {
 /* End Heading */
 /* Start Landing */
 .landing {
-  background-color: #fcf8ff;
   height: 730px;
+  background-color: #fcf8ff;
   background-image: url(/images/bg-landing.svg);
   background-size: cover;
   background-position: 100% 100%;
@@ -127,6 +111,7 @@ hr::after {
   content: url("images/image-hero.png");
   width: 762px;
   height: 424px;
+
   position: absolute;
   top: 471px;
   left: 50%;
@@ -137,13 +122,32 @@ hr {
   width: 100%;
   border: 0;
 }
+hr::before {
+  content: url(images/bg-pattern-1.svg);
+  width: 341px;
+  height: 317px;
+
+  position: absolute;
+  top: 116px;
+  left: -138px;
+}
+hr::after {
+  content: url(images/bg-pattern-2.svg);
+  width: 174;
+  height: 181px;
+
+  position: absolute;
+  top: 314px;
+  right: -48px;
+}
 .landing .landing-content {
-  margin: 0;
+  /* margin: 0; */
 }
 .landing .container .title {
   width: 635px;
-
   color: var(--clr-neutral-100, #fff);
+
+  font-family: var(--ff-accent);
   font-size: 80px;
   font-weight: var(--fw-bold);
   text-align: center;
@@ -156,11 +160,12 @@ hr {
 .learn-more {
   background: var(--clr-primary-400, #44ffa1);
   color: var(--clr-primary-900, #24053e);
-  font-size: 18px;
+
   font-weight: var(--fw-bold);
   line-height: 32px;
   letter-spacing: -0.18px;
   padding: 16px 32px;
+
   border: 0;
   transition: var(--dt-main);
 }
@@ -194,15 +199,18 @@ hr {
   align-items: center;
 }
 .num {
+  color: var(--clr-primary-900, #24053e);
+
   width: 56px;
   height: 56px;
+
   border-radius: 30.5px;
   border: 1px solid var(--clr-primary-900, #584d62);
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  color: var(--clr-primary-900, #24053e);
   font-family: var(--ff-accent);
   font-size: 24px;
   font-weight: var(--fw-semi-bold);
@@ -215,6 +223,7 @@ hr {
 }
 .info .title {
   color: var(--clr-primary-900, #24053e);
+
   font-family: var(--ff-accent);
   font-size: 32px;
   font-style: normal;
@@ -223,10 +232,11 @@ hr {
 }
 .func .info .title + p {
   color: var(--clr-neutral-600, #584d62);
-  font-size: 18px;
+
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
   line-height: 32px;
+
   padding: 0 15px;
 }
 /* End Features */
@@ -237,14 +247,18 @@ hr {
 .contact-content {
   width: 1120px;
   height: 586px;
+
   text-align: center;
-  position: relative;
+
   padding: 0 40px;
   margin: auto;
+
+  position: relative;
 }
 .contact-content .image {
   width: 477px;
   height: 477px;
+
   display: flex;
   align-items: flex-start;
   text-align: center;
@@ -254,11 +268,14 @@ hr {
   left: 0;
 }
 .contact-content .info {
+  background-color: var(--clr-primary-900, #24053e);
+
   width: 730px;
   height: fit-content;
-  background-color: var(--clr-primary-900, #24053e);
-  padding: 64px;
+  
   text-align: left;
+
+  padding: 64px;
 
   position: absolute;
   right: 0;
@@ -266,6 +283,7 @@ hr {
 }
 .contact-content .info .title {
   color: var(--clr-neutral-100, #fff);
+
   font-family: var(--ff-accent);
   font-size: 56px;
   font-weight: var(--fw-semi-bold);
@@ -273,21 +291,26 @@ hr {
 }
 .contact-content .info .title + p {
   color: var(--clr-neutral-100, #fff);
-  font-size: 18px;
+
   font-weight: 400;
   line-height: 32px;
+
   text-align: left;
+
   padding: 32px 0px;
 }
 .contact-content .info .button-subscribe {
   border: 0;
+
   background-color: var(--clr-primary-400);
   color: var(--clr-primary-900, #24053e);
-  font-size: 18px;
+
   font-weight: var(--fw-bold);
   line-height: 32px;
   letter-spacing: -0.18px;
+
   padding: 13px 26px;
+  
   transition: var(--dt-main);
 }
 .contact-content .info .button-subscribe:hover {
